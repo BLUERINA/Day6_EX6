@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="day_contents">지금은 "DAY-MODE" 입니다.</div><br><br>
+<input id="dayMode" type="button" value="다크모드" name="dark"
+onclick=changeMode()>
+
+<script>
+function changeMode() {
+	
+	var mode = document.getElementById("dayMode").value;
+	
+	if( mode == "다크모드"){
+		darkMode();
+	} else if ( mode == "데이모드") {
+		dayMode();		
+	}
+	
+}
+
+function darkMode() {
+	document.body.style.backgroundColor="black";
+	document.getElementById("day_contents").style.color="white";
+	document.getElementById("dayMode").value="데이모드";
+	document.getElementById("day_contents").innerText='지금은 "DARK-MODE" 입니다.';
+}
+
+function dayMode() {
+	document.body.style.backgroundColor="white";
+	document.getElementById("day_contents").style.color="black";
+	document.getElementById("dayMode").value="다크모드";
+	document.getElementById("day_contents").innerText='지금은 "DAY-MODE" 입니다.';
+}
+</script>
+</body>
+</html>
